@@ -1,0 +1,48 @@
+.bigDivs {
+    padding: 3%;
+    background-color: #ADE7FF;
+    display: flex;
+    justify-content: space-around;
+}
+
+.organizedData {
+    width: 224px;
+    height: 315px;
+    background-color: #109CEB;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5%;
+}
+
+.organizedData:hover {
+    width: 243px;
+    height: 341px;
+    background-color: #109CEB;
+    border-color: #EB9010;
+    border-style: solid;
+    border-width: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5%;
+}
+
+#root {
+    display: none;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 90%;
+    background-color:#EB9010;
+    border-color: #ffffff;
+    color: #ffffff;
+    border-style: solid;
+    border-width: 4px;
+    z-index: 3;
+    text-align: center;
+    padding: 10px;
+}
