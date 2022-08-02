@@ -1,19 +1,34 @@
-.bigDivs {
+#bigDivs {
     padding: 3%;
     background-color: #ADE7FF;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
+
+@media (max-width: 1000px) {
+    #bigDivs {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media (max-width: 800px) {
+    #bigDivs {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+
 
 .organizedData {
     width: 224px;
     height: 315px;
     background-color: #109CEB;
     border-radius: 50px;
+    margin:10px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
 }
 
 .organizedData:hover {

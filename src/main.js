@@ -2,50 +2,45 @@ import { example } from './data.js';
 import { anotherExample } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
-//document.getElementById('data1').innerHTML = (example, anotherExample, data.films, data.films[1].people, data.films[1].people[2].eye_color);
-let filmNumber = [];
-let peopleNumber =[];
-let vehiclesNumber = [];
-let locationsNumber = [];
 for (let x = 0; x < data.films.length; x++) {
-    filmNumber[x]  = data.films[x].title;
+    let div = document.createElement('div');
+    div.id = data.films[x].id;
+    div.className = "organizedData";
+    div.innerHTML = data.films[x].title;
+    document.getElementById('bigDivs').appendChild(div);
+    div.addEventListener('click', function () { dataWindow(div.id); });
     for (let i = 0; i < data.films[x].people.length; i++) {
-        peopleNumber[i] = data.films[x].people[i].name;
+        let div = document.createElement('div');
+        div.id = data.films[x].people[i].id;
+        div.className = "organizedData";
+        div.innerHTML = data.films[x].people[i].name;
+        document.getElementById('bigDivs').appendChild(div);
+        div.addEventListener('click', function () { dataWindow(div.id); });
     }
     for (let i = 0; i < data.films[x].vehicles.length; i++) {
-        vehiclesNumber[i] = data.films[x].vehicles[i].name;
+        let div = document.createElement('div');
+        div.id = data.films[x].vehicles[i].id;
+        div.className = "organizedData";
+        div.innerHTML = data.films[x].vehicles[i].name;
+        document.getElementById('bigDivs').appendChild(div);
+        div.addEventListener('click', function () { dataWindow(div.id); });
     }
     for (let i = 0; i < data.films[x].locations.length; i++) {
-        locationsNumber[i] = data.films[x].locations[i].name;
-    }
-};
-
-let totalCatalogue = filmNumber.concat(peopleNumber,vehiclesNumber,locationsNumber);
-let organizedCatalogue = 0;
-let divNumber = totalCatalogue.length / 4;
-
-for (let i = 0; i < divNumber; i++) {
-    let div = document.createElement('div');
-    div.id = ("div" + i);
-    div.className = ("bigDivs");
-    document.body.appendChild(div);
-    for (let q = 0; q < 4; q++) {
         let div = document.createElement('div');
-        div.id = totalCatalogue[organizedCatalogue + q];
+        div.id = data.films[x].locations[i].id;
         div.className = "organizedData";
-        div.innerHTML = totalCatalogue[organizedCatalogue + q];
-        document.getElementById("div" + i).appendChild(div); 
-        div.addEventListener('click', function (){ dataWindow (div.id); });    
+        div.innerHTML = data.films[x].locations[i].name;
+        document.getElementById('bigDivs').appendChild(div);
+        div.addEventListener('click', function () { dataWindow(div.id); });
     }
-    organizedCatalogue += 4;
 };
 
 const showData = document.getElementById("root");
-showData.addEventListener('click', function() {showData.style.display = 'none'})
-function dataWindow (filmName) {
+showData.addEventListener('click', function () { showData.style.display = 'none' })
+function dataWindow(filmName) {
     showData.style.display = "block"
     for (let x = 0; x < data.films.length; x++) {
-        if(filmName === data.films[x].title) {
+        if (filmName === data.films[x].id) {
             document.getElementById('data1').innerHTML = ('Name: ' + data.films[x].title);
             document.getElementById('data2').innerHTML = ('Description: ' + data.films[x].description);
             document.getElementById('data3').innerHTML = ('Director: ' + data.films[x].director);
@@ -55,40 +50,36 @@ function dataWindow (filmName) {
             break;
         }
         else {
-            for (let i = 0; i < data.films[x].people.length; i++) {
-                if(filmName === data.films[x].people[i].name) {
-                    document.getElementById('data1').innerHTML = ('Name: ' + data.films[x].people[i].name);
-                    document.getElementById('data2').innerHTML = ('Age: ' + data.films[x].people[i].age);
-                    document.getElementById('data3').innerHTML = ('Eye color: ' + data.films[x].people[i].eye_color);
-                    document.getElementById('data4').innerHTML = ('Gender: ' + data.films[x].people[i].gender);
-                    document.getElementById('data5').innerHTML = ('Hair color: ' + data.films[x].people[i].hair_color);
+            data.films[x].people.forEach(name => {
+                if (filmName === name.id) {
+                    document.getElementById('data1').innerHTML = ('Name: ' + name.name);
+                    document.getElementById('data2').innerHTML = ('Age: ' + name.age);
+                    document.getElementById('data3').innerHTML = ('Eye color: ' + name.eye_color);
+                    document.getElementById('data4').innerHTML = ('Gender: ' + name.gender);
+                    document.getElementById('data5').innerHTML = ('Hair color: ' + name.hair_color);
                     document.getElementById('data6').innerHTML = ('Apears in: ' + data.films[x].title);
-                    break;
                 }
-            }
-            for (let i = 0; i < data.films[x].vehicles.length; i++) {
-                if(filmName === data.films[x].vehicles[i].name) {
-                    document.getElementById('data1').innerHTML = ('Name: ' + data.films[x].vehicles[i].name);
-                    document.getElementById('data2').innerHTML = ('Description: ' + data.films[x].vehicles[i].description);
-                    document.getElementById('data3').innerHTML = ('Vehicle class: ' + data.films[x].vehicles[i].vehicle_class);
-                    document.getElementById('data4').innerHTML = ('Pilot: ' + data.films[x].vehicles[i].pilot);
-                    document.getElementById('data5').innerHTML = ('Length: ' + data.films[x].vehicles[i].length);
+            });
+            data.films[x].vehicles.forEach(name => {
+                if (filmName === name.id) {
+                    document.getElementById('data1').innerHTML = ('Name: ' + name.name);
+                    document.getElementById('data2').innerHTML = ('Description: ' + name.description);
+                    document.getElementById('data3').innerHTML = ('Vehicle class: ' + name.vehicle_class);
+                    document.getElementById('data4').innerHTML = ('Pilot: ' + name.pilot.name);
+                    document.getElementById('data5').innerHTML = ('Length: ' + name.length);
                     document.getElementById('data6').innerHTML = ('Apears in: ' + data.films[x].title);
-                    break;
                 }
-            }
-            for (let i = 0; i < data.films[x].locations.length; i++) {
-                if(filmName === data.films[x].locations[i].name) {
-                    document.getElementById('data1').innerHTML = ('Name: ' + data.films[x].locations[i].name);
-                    document.getElementById('data2').innerHTML = ('Climate: ' + data.films[x].locations[i].climate);
-                    document.getElementById('data3').innerHTML = ('Residents: ' + data.films[x].locations[i].residents);
-                    document.getElementById('data4').innerHTML = ('Water surface: ' + data.films[x].locations[i].surface_water);
-                    document.getElementById('data5').innerHTML = ('Terrain: ' + data.films[x].locations[i].terrain);
+            });
+            data.films[x].locations.forEach(name => {
+                if (filmName === name.id) {
+                    document.getElementById('data1').innerHTML = ('Name: ' + name.name);
+                    document.getElementById('data2').innerHTML = ('Climate: ' + name.climate);
+                    document.getElementById('data3').innerHTML = ('Residents: ' + name.residents);
+                    document.getElementById('data4').innerHTML = ('Water surface: ' + name.surface_water);
+                    document.getElementById('data5').innerHTML = ('Terrain: ' + name.terrain);
                     document.getElementById('data6').innerHTML = ('Appears in: ' + data.films[x].title);
-                    break;
                 }
-            }
+            });
         }
-    };
-
+    }
 };
