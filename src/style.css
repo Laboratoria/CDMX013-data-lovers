@@ -5,7 +5,13 @@
     justify-content: space-around;
 }
 
+@media (min-width: 720px) {
+    .organizedData {
+        float: right;
+    }
+}
 .organizedData {
+    float: right;
     width: 224px;
     height: 315px;
     background-color: #109CEB;
