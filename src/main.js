@@ -2,6 +2,18 @@ import { example } from './data.js';
 import { anotherExample } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
+const textNav = document.getElementById("textNav");
+const btnNav = document.getElementById("btnNav");
+const btnClose = document.getElementById("btnClose");
+
+btnNav.addEventListener("click", function(){
+        textNav.style.display = "block"; 
+});
+
+btnClose.addEventListener("click", function(){
+    textNav.style.display = "none"; 
+});
+
 for (let x = 0; x < data.films.length; x++) {
     let div = document.createElement('div');
     div.id = data.films[x].id;
