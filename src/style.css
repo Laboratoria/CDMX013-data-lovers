@@ -1,3 +1,90 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", fantasy;
+}
+
+body {
+    background-color: #ADE7FF;
+    color: white;
+}
+
+header {
+    background-color: #109CEB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+h1{
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.subtitle {
+    font-size: 20px;
+    letter-spacing: 15px;
+    padding-left: 15px;
+}
+
+.btnNav {
+    background-color: transparent;
+    border-color: transparent;
+    align-self: flex-end;
+    position: absolute;
+}
+
+.btnClose {
+    text-decoration: none;
+    background-color: transparent;
+    color: #ffffff;
+    display: block;
+    align-self: flex-end;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 350px;
+    top: 0;
+    right: 0;
+    background: #EB9010;
+    display: none;
+}
+
+.sidebar .text {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center; 
+}
+
+nav ul {
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+nav ul li {
+    line-height: 60px;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
 #bigDivs {
     padding: 3%;
     background-color: #ADE7FF;
