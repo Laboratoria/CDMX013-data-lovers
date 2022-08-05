@@ -12,36 +12,33 @@ btnClose.addEventListener("click", function () {
     textNav.style.display = "none";
 });
 
-for (let x = 0; x < data.films.length; x++) {
+function divCreator (dataElement){
+    let div = document.createElement('div');
+    div.id = "div" + dataElement.id;
+    div.className = "organizedData";
+    document.getElementById('bigDivs').appendChild(div);
+    let elementName = document.createElement('p');
+    elementName.innerHTML = dataElement.name;
+    elementName.className = "dataName";
+    document.getElementById("div" + dataElement.id).appendChild(elementName);
     let image = document.createElement('img');
-    image.src = data.films[x].poster;
-    image.id = data.films[x].id;
-    image.className = "organizedData";
-    document.getElementById('bigDivs').appendChild(image);
-    image.addEventListener('click', function () { dataWindow(image.id); });
+    image.src = dataElement.img;
+    image.className = "DataImage";
+    image.id = dataElement.id;
+    document.getElementById("div" + dataElement.id).appendChild(image);
+    image.addEventListener('click', function () { dataWindow(image.id); });  
+}
+
+for (let x = 0; x < data.films.length; x++) {
+    divCreator(data.films[x]);
     data.films[x].people.forEach(character => {
-        let image = document.createElement('img');
-        image.src = character.img;
-        image.id = character.id;
-        image.className = "organizedData";
-        document.getElementById('bigDivs').appendChild(image);
-        image.addEventListener('click', function () { dataWindow(image.id); });
+        divCreator(character);
     });
     data.films[x].vehicles.forEach(vehicle => {
-        let image = document.createElement('img');
-        image.src = vehicle.img;
-        image.id = vehicle.id;
-        image.className = "organizedData";
-        document.getElementById('bigDivs').appendChild(image);
-        image.addEventListener('click', function () { dataWindow(image.id); });
+        divCreator(vehicle);
     });
     data.films[x].locations.forEach(location => {
-        let image = document.createElement('img');
-        image.src = location.img;
-        image.id = location.id;
-        image.className = "organizedData";
-        document.getElementById('bigDivs').appendChild(image);
-        image.addEventListener('click', function () { dataWindow(image.id); });
+        divCreator(location);
     });
 }
 
