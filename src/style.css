@@ -130,7 +130,7 @@ nav ul li a {
     border-style: solid;
     border-width: 4px;
     margin: 10px;
-
+    object-fit: cover;
 }
 
 .organizedData:hover {
@@ -142,14 +142,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-}
-
-.organizedDataFront {
-    display: none;
-}
-
-.organizedDataFront:hover {
-    display: block;
+    object-fit: cover;
 }
 
 #root {
