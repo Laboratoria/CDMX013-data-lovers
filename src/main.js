@@ -14,13 +14,51 @@ btnClose.addEventListener("click", function(){
     textNav.style.display = "none"; 
 });
 
+
+
+for (let x = 0; x < data.films.length; x++) {
+    let image = document.createElement('img');
+    image.src = data.films[x].poster;
+    image.id = data.films[x].id;
+    image.className = "organizedData";
+    document.getElementById('bigDivs').appendChild(image);
+    image.addEventListener('click', function () { dataWindow(image.id); }); }
+   
+/*
+   for (let i = 0; i < data.films[x].people.length; i++) {
+    let image = document.createElement('img');
+    image.src = data.films[x].people[i].img;
+    image.id = data.films[x].people[i].id;
+    image.className = "organizedData"
+    document.getElementById('bigDivs').appendChild(image);}
+    image.addEventListener('click', function () { dataWindow(image.id); });
+    
+   for (let i = 0; i < data.films[x].vehicles.length; i++) {
+    let image = document.createElement('img');
+    image.src = data.films[x].vehicles[i].img;
+    image.id = data.films[x].vehicles[i].id;
+    image.className = "organizedData"
+    document.getElementById('bigDivs').appendChild(image);}
+    image.addEventListener('click', function () { dataWindow(image.id); });
+
+    for (let i = 0; i < data.films[x].locations.length; i++) {
+        let image = document.createElement('img');
+        image.src = data.films[x].locations[i].img;
+        image.id = data.films[x].locations[i].id;
+        image.className = "organizedData"
+        document.getElementById('bigDivs').appendChild(image);}
+        image.addEventListener('click', function () { dataWindow(image.id); });
+}
+   
+/*
 for (let x = 0; x < data.films.length; x++) {
     let div = document.createElement('div');
     div.id = data.films[x].id;
     div.className = "organizedData";
     div.innerHTML = data.films[x].title;
     document.getElementById('bigDivs').appendChild(div);
-    div.addEventListener('click', function () { dataWindow(div.id); });
+   }
+    /*
     for (let i = 0; i < data.films[x].people.length; i++) {
         let div = document.createElement('div');
         div.id = data.films[x].people[i].id;
@@ -45,7 +83,8 @@ for (let x = 0; x < data.films.length; x++) {
         document.getElementById('bigDivs').appendChild(div);
         div.addEventListener('click', function () { dataWindow(div.id); });
     }
-};
+}; */
+
 
 const showData = document.getElementById("root");
 showData.addEventListener('click', function () { showData.style.display = 'none' })
@@ -60,7 +99,8 @@ function dataWindow(filmName) {
             document.getElementById('data5').innerHTML = ('Release date: ' + data.films[x].release_date);
             document.getElementById('data6').innerHTML = ('Rotten Tomato Score: ' + data.films[x].rt_score);
             break;
-        }
+        } }}
+        /*
         else {
             data.films[x].people.forEach(name => {
                 if (filmName === name.id) {
@@ -94,4 +134,4 @@ function dataWindow(filmName) {
             });
         }
     }
-};
+}; */
