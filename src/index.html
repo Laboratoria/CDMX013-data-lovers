@@ -1,31 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <div id="titulo">EXPECTO PATRONUM</div>
-      
-     
-    </header>
-    <nav class="navegacion">
-      <ul class="menu">
-        <li><a href="#">Caracters</a></li>
-        <li><a href="#">Spells</a></li>
-        <li><a href="#">Potions</a></li>
-        <li><a href="#">Books</a></li>
-        <li><a href="#">Fun Facts</a></li>
-   
 
-      </ul>
-    </nav>
-    <div id="root">
-    <button type="buttom" name="test" value="test">haz clic </button>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1ccdbd1c10.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+
+    <div id="titulo">EXPECTO PATRONUM</div>
+  </header>
+  <br>
+  <nav class="main-menu" id="main-menu">
+    <ul class="menu">
+      <li><a href="#">Caracters</a></li>
+      <li><a href="#">Spells</a></li>
+      <li><a href="#">Potions</a></li>
+      <li><a href="#">Books</a></li>
+      <li><a href="#">Fun Facts</a></li>
+    </ul>
+  </nav>
+  <!--Buscador-->
+  <div class="buscador">
+    <input type="text" placeholder="Search">
+    <div class="btn">
+      <i class="fa-solid fa-magnifying-glass icon"></i>
     </div>
-    <script src="main.js" type="module"></script>
-  </body>
+  </div>
+  <br><br><br><br><br>
+  <!--Carrusel-->
+  <div class="container">
+
+    <ul class="slider">
+      <li id="slide1">
+        <img src="https://1000marcas.net/wp-content/uploads/2021/11/Gryffindor-Logo.png" />
+      </li>
+      <li id="slide2">
+        <img src="https://m.media-amazon.com/images/I/71y1no7opUL._AC_UX385_.jpg">
+      </li>
+      <li id="slide3">
+        <img src="https://m.media-amazon.com/images/I/71jTE5obH-L._AC_SL1200_.jpg">
+      </li>
+      <li id="slide4">
+        <img src="http://pm1.narvii.com/7153/504fef8f3c7d176bdde46d29bd406bea9b2ac5e5r1-531-683v2_uhq.jpg">
+      </li>
+    </ul>
+
+    <ul class="puntos">
+      <li>
+        <a href="#slide1">1</a>
+      </li>
+      <li>
+        <a href="#slide2">2</a>
+      </li>
+      <li>
+        <a href="#slide3">3</a>
+      </li>
+      <li>
+        <a href="#slide4">4</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <main>
+
+
+  </main>
+
+  <div id="root">
+  </div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
