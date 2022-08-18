@@ -32,8 +32,8 @@
   <div class="selects-filters-container">
     <div class="tipos">
       <select id="pokemon-types" class="select-filter">
-        <option disabled selected>Type</option>
-        <option value="Grass">Grass</option>
+        <option value ="" id='type'>Type</option>
+        <option value="Grass" id="Grass">Grass</option>
         <option value="Poison">Poison</option>
         <option value="Fire">Fire</option>
         <option value="Flying">Flying</option>
@@ -53,7 +53,7 @@
       </select>
     </div>
     <div class="ordenar">
-      <select id="Ordenar por" class="select-filter">
+      <select id="sortby" class="select-filter">
         <option disabled selected>Sort by</option>
         <option value="0">A-Z</option>
         <option value="1">Z-A</option>
@@ -62,6 +62,7 @@
   </div>
 
   <div id="allpokemons"></div>
+  <div id="selection"></div>
   <script src="main.js" type="module"></script>
 </body>
 <footer>

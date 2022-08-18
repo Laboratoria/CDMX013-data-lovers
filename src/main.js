@@ -1,33 +1,53 @@
-//import {} from './data.js';
+import { filterByType, sortByAsc, sortByDsc } from './data.js';
 import data from './data/pokemon/pokemon.js';
-//const str = '{ "name", "resistant", "weaknesses"}';
-const allpokemons = document.getElementById("allpokemons")
-allpokemons.classList="pokeStyle"
-const pokemons= data.pokemon
-for (let i=0; i<pokemons.length;i++) {
-    const x = pokemons[i]
-    
-    const type = x.type
-    console.log(type)
+const generadorHTML = (pokemon) => {
+    const div = document.createElement("div")
+    for (let index = 0; index < pokemon.length; index++) {
+        const element = pokemon[index];
+        div.classList.add("pokemon")
+        div.classList.add("grow")
+
+        const pokeName = document.createElement("h2")
+        pokeName.textContent = element.name
+
+        const img = document.createElement("img")
+        img.setAttribute("src", element.img)
+
+        const pokeType = document.createElement("h4")
+        pokeType.textContent = element.type
+        div.append(img, pokeName, pokeType)
     }
-const generadorHTML=(pokemon)=>{
- 
-const div = document.createElement("div")
-div.classList.add("pokemon")
-div.classList.add("grow")
-
-const pokeName = document.createElement("h2")
-pokeName.textContent=pokemon.name
-
-const img = document.createElement("img")
-img.setAttribute("src",pokemon.img)
-
-const pokeType = document.createElement("h4")
-pokeType.textContent=pokemon.type
-
-
-div.append(img, pokeName, pokeType)
-return div
+    return div
 }
-pokemons.forEach(onePokemon=>allpokemons.appendChild(generadorHTML(onePokemon)))
+const allpokemons = document.getElementById("allpokemons")
+allpokemons.classList = "pokeStyle"
+const pokemons = data.pokemon
+allpokemons.append(generadorHTML(pokemons));
 
+const selecttype = document.getElementById('pokemon-types');
+selecttype.addEventListener('change', (e) => {
+    let results = "";
+    if (e.target.value === '') {
+        results = generadorHTML(pokemons);
+
+    } else {
+        let c = filterByType(e.target.value, pokemons);
+        results = generadorHTML(c);
+    }
+    allpokemons.innerHTML=results.innerHTML;
+});
+
+const selectSort = document.getElementById("sortby");
+selectSort.addEventListener('change', (e) => {
+    
+    let results = '';
+    if(e.target.value == 0) {
+        results = generadorHTML(pokemons.sort(sortByAsc));
+      
+    }else {
+        results = generadorHTML(pokemons.sort(sortByDsc));
+
+    }
+    allpokemons.innerHTML=results.innerHTML;
+
+});

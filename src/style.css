@@ -35,16 +35,21 @@ header {
     margin-left: 48%;
     flex-direction: column;
     position: absolute;
-    top: 40%;
+    top: 35%;
+    animation: typing 2 s steps(12);
+    blink .5s infinite step-end alternate;
+    overflow: hidden;
 
 }
+
+
 
 #allpokemons {
     display: flex;
     flex-wrap: wrap;
     align-items: space-between;
     justify-content: center;
-    margin: 0 auto;
+    margin: -190px -300px -300px 300px;
     max-width: 1200px;
     padding: 6%;
     text-transform: capitalize;
@@ -64,8 +69,6 @@ header {
     margin: 30px;
     padding: 50px;
     text-align: center;
-
-
 }
 
 .pokemon img {
@@ -99,12 +102,12 @@ header {
     height: 50px;
     background-color:#273746;
     color: whitesmoke;
-    margin: -100px 0px 0px -120px;
-    padding: 10px;
+    margin: -250px 0px 0px -120px;
+    padding: 5px;
     border-radius: 17px;
     border: 1px solid #273746;
     font-weight: 800;
-    font-size: 20px;
+    font-size: 30px;
     position: absolute;
     font-family:'Patrick Hand', cursive;
 }
@@ -113,7 +116,7 @@ footer {
     font-family:'Patrick Hand', cursive;
     font-size: 150%;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 20%;
 }
 
 
