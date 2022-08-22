@@ -1,5 +1,7 @@
-export const filterByType = (type, pokemons) => {
-  let arrayfiltrado = pokemons.filter(pokemon => pokemon.type[0] == type.toLowerCase() || pokemon.type[1] == type.toLowerCase());
+
+export const filterByType = (condition, pokemons) => {
+  let arrayfiltrado = pokemons.filter(pokemon => pokemon.type[0] == condition.toLowerCase() || pokemon.type[1] == condition.toLowerCase());
+
   return arrayfiltrado;
 };
 
@@ -19,4 +21,5 @@ export const sortByDsc = (a, b) => {
     return -1;
   }
 
-};
+}
+
