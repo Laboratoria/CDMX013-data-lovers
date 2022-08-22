@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #CF1F36;
+
+}
+
+header {
+    width: 100%;
+    height: 48%;
+    position: relative;
+    padding: 0 0 5%;
+}
+
+#logo {
+    display: flex;
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    top: 2%;
+    justify-content: right;
+    right: 5%;
+}
+
+#welcome {
+    font-size: 5%;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 120ch;
+    color: white;
+    margin-left: 33%;
+    position: absolute;
+    top: 22%;
+    display: block;
+    animation: typing 2s steps(12),
+        blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+#allpokemons {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 3%;
+    text-transform: capitalize;
+    font-family: 'Comfortaa', cursive;
+    font-size: small;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    border: solid 20px rgb(197, 197, 197);
+    margin: -14% 10% 10% 10%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+
+}
+
+.card div {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: .5s;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100px;
+    width: 200px;
+    height: 250px;
+    margin: 20px;
+    align-items: center;
+}
+
+.pokemonFront {
+    box-shadow: 0 5px 10px #000;
+    transform: perspective(600px) rotateY(0deg);
+    background-color: #f6f6f6;
+    border-radius: 18px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    text-align: center;
+
+}
+
+.pokemonFront img {
+    position: absolute;
+    align-content: center;
+    background-color: white;
+    border-radius: 50%;
+    border: solid 1px black;
+    margin: 38% 20% 15% -30%;
+}
+
+.namePokemon {
+    font-family: 'Comfortaa', cursive;
+    color: black;
+    font-size: 25px;
+    margin: 13% 10% 15% 10%;
+}
+
+.typePokemon {
+    margin: 80% 10% 15% 10%;
+
+}
+
+.pokemonBack {
+    box-shadow: 0 5px 10px #000;
+    transform: perspective(600px) rotateY(0deg);
+    background-color: rgb(245, 200, 200);
+    border-radius: 18px;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    text-align: center;
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.resistant {
+
+    font-family: 'Comfortaa', cursive;
+    color: green;
+    font-size: 12px;
+    margin: 13% 10% 15% 10%;
+    word-break: break-all;
+}
+
+.weaknesses {
+    font-family: 'Comfortaa', cursive;
+    color: red;
+    font-size: 12px;
+    margin: 13% 10% 20% 10%;
+}
+
+.height {
+    font-family: 'Comfortaa', cursive;
+    color: black;
+    font-size: 12px;
+    margin: 35% 5% 15% 5%;
+}
+
+.weight {
+    font-family: 'Comfortaa', cursive;
+    color: black;
+    font-size: 12px;
+    margin: 5% 5% 15% 5%;
+}
+
+
+
+.card:hover .pokemonFront {
+    transform: perspective(600px) rotateY(180deg);
+
+}
+
+.card:hover .pokemonBack {
+    transform: perspective(600px) rotateY(360deg);
+
+}
+
+
+.selects-filters-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    text-align: left;
+
+}
+
+.select-filter {
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    background-color: #273746;
+    color: whitesmoke;
+    border-radius: 17px;
+    border: 1px solid #273746;
+    font-weight: 800;
+    font-size: 20px;
+    position: absolute;
+    font-family: 'Patrick Hand', cursive;
+    top: 280px;
+    margin: -20px 0px 0px -120px;
+    padding: 80px;
+
+
+}
+
+footer {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 150%;
+    text-align: center;
+    margin-top: 10%;
+}
