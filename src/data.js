@@ -1,9 +1,19 @@
 // estas funciones son de ejemplo
+//import harryPotter from "./data/harrypotter/data.js"
 
-export const example = () => {
-  return 'example';
+const filterAll = {
+houses : function (characters, house ) {
+  const filterCharacters = characters.filter((character)=>{
+    return character.house === house
+  });
+   return filterCharacters;
+},
+spells: function (spells, spellType ){
+  const filterSpells= spells.filter((spells)=>{
+      return spells.spell_type===spellType
+  })
+  return filterSpells;
+}
 };
-
-export const anotherExample = () => {
-  return 'OMG';
-};
+console.log(filterAll);
+export default filterAll;

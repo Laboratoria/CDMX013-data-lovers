@@ -6,27 +6,39 @@
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/wizard-world" rel="stylesheet">
   <script src="https://kit.fontawesome.com/1ccdbd1c10.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+  <!--New Header-->
   <header>
-    <div id="titulo">EXPECTO PATRONUM</div>
+    <div id="titulo"><a href="index.html">EXPECTO PATRONUM</a></div>
+    <nav class="main-menu">
+      <ul class="menu">
+        <li id="characters"><a href="#">Characters</a></li>
+        <li id="spells"><a href="#">Spells</a>
+          <ul class="spellsType">
+            <li id="all"><a href="#">Show All</a>
+            <li id="charm"><a href="#">charm<a></li>
+            <li id="conjuration"><a href="#">Conjuration</a></li>
+            <li id="hex"><a href="#">Hex</a></li>
+            <li id="jinx"><a href="#">Jinx</a></li>
+            <li id="curse"><a href="#">Curse</a></li>
+            <li id="transfiguration"><a href="#">Transfiguration</a></li>
+            <li id="healingSpell"><a href="#">Healing Spell</a></li>
+            <li id="vanishment"><a href="#">Vanishment</a></li>
+            <li id="transportation"><a href="#">Transportation</a></li>
+            <li id="darkArts"><a href="#">Dark Arts</a></li>
+          </ul>
+        </li>
+        <li><a id="potions" href="#">Potions</a></li>
+        <li><a id="books" href="#">Books</a></li>
+        <li><a id="funFacts" href="#">Fun Facts</a></li>
+      </ul>
+    </nav>
   </header>
-   <br>
-  <nav class="main-menu" id="main-menu">
-    <ul class="menu">
-      <li><a id="characters" href="#">Caracters</a></li>
-      <li><a id="spells" href="#">Spells</a></li>
-      <li><a id="potions" href="#">Potions</a></li>
-      <li><a id="books" href="#">Books</a></li>
-      <li><a id="funFacts" href="#">Fun Facts</a></li>
-    </ul>
-   
-  </nav>
-
-
- 
   <!--Buscador-->
   <div class="buscador">
     <input type="text" placeholder="Search">
@@ -34,40 +46,27 @@
       <i class="fa-solid fa-magnifying-glass icon"></i>
     </div>
   </div>
-<br>
-  <!--Carrusel-->
-  <div class="container">
-    <ul class="slider">
-      <li id="slide1">
-        <a href="#griffindor"><img src="https://1000marcas.net/wp-content/uploads/2021/11/Gryffindor-Logo.png" /></a>
-      </li>
-      <li id="slide2">
-        <img src="https://i.pinimg.com/originals/3d/db/2f/3ddb2f1758b2c930a3100aa3c99cd6c7.png">
-      </li>
-      <li id="slide3">
-        <img src="https://w7.pngwing.com/pngs/869/121/png-transparent-slytherin-logo-slytherin-house-hogwarts-harry-potter-professor-severus-snape-helga-hufflepuff-harry-potter-logo-bellatrix-lestrange-slytherin-house-thumbnail.png">
-      </li>
-      <li id="slide4">
-        <img src="http://pm1.narvii.com/7153/504fef8f3c7d176bdde46d29bd406bea9b2ac5e5r1-531-683v2_uhq.jpg">
-      </li>
-    </ul>
-
-    <ul class="puntos">
-      <li>
-        <a href="#slide1"></a>
-      </li>
-      <li>
-        <a href="#slide2"></a>
-      </li>
-      <li>
-        <a href="#slide3"></a>
-      </li>
-      <li>
-        <a href="#slide4"></a>
-      </li>
-    </ul>
+  <br>
+  <!---Houses-containers-->
+<div class ="container">
+  <div class="houses" id="hGryffindor">
+    <a href="#" id="Gryffindor">Gryffindor
+    <img src="./imagenes/gryffindor3.png"></a>
   </div>
-
+  <div class="houses" id="hHufflepuff">
+    <a href="#" id="Hufflepuff">Hufflepuff
+    <img src="./imagenes/hufflepuff.png"></a>
+  </div>
+  <div class="houses" id="hRavenclaw">
+    <a href="#" id="Ravenclaw">Ravenclaw
+    <img src="./imagenes/ravenclaw2.png"></a>
+  </div>
+  <div class="houses" id="hSlytherin">
+    <a href="#" id="Slytherin">Slytherin
+    <img src="./imagenes/slytherin2.png"></a>
+  </div>
+</div>
+  <!---Cards-->
   <main>
 
   </main>

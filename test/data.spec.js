@@ -1,9 +1,9 @@
-import { example, anotherExample } from '../src/data.js';
+import filterAll from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('filterAll', () => {
+  it('Should be a object', () => {
+    expect(typeof houses).toBe('object');
   });
 
   it('returns `example`', () => {
