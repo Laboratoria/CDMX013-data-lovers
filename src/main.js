@@ -368,3 +368,10 @@ document.getElementById("vanishment").addEventListener("click", showVanishment);
 document.getElementById("transportation").addEventListener("click", showTransportation);
 document.getElementById("darkArts").addEventListener("click", showDarkArts);
 //console.log( example, data);
+
+document.getElementById("characters").addEventListener("click", showCaracters);
+document.getElementById("spells").addEventListener("click", showSpells);
+document.getElementById("potions").addEventListener("click", showPotions);
+document.getElementById("books").addEventListener("click", showBooks);
+document.getElementById("funFacts").addEventListener("click", showfunFacts);
+
