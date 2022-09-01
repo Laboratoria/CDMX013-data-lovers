@@ -1,87 +1,143 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
 }
-header{
+
+header {
     width: 100%;
-    height: 250px;
+    height: 200px;
+    margin: auto;
     padding: 0%;
-    /*background: url(https://alltimelines.com/wp-content/uploads/2019/10/wizarding-world-banner.jpg);*/
-   background: url(https://github.com/Shatterdome01/CDMX013-cipher/blob/main/Banner.jpg?raw=true); 
-   text-align: center;
+    background-color: #000;
+    text-align: center;
     font-size: 60px;
     color: rgb(245, 242, 247);
-    font-family: 'Jolly Lodger', cursive;
+    font-family: 'Wizard World', sans-serif;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     position: sticky;
 }
 
-#titulo{
-    padding-top: 120px;
-    position:sticky;
-}
-
-body{
-    background:url(https://i.pinimg.com/564x/32/fb/ea/32fbead8fce21e12751d03e83029961d.jpg);
-    background-size: 100%;
-    width: 100%;
-    height: 100%;
-   
-}
-
-#main-menu{
-    width: fit-content;
-    height: fit-content;
-    background-color: blanchedalmond;   
-    border-radius: 30px;
-    margin: 0 auto;
-    position:sticky;
-
-}
-.main-menu #menu{
-    list-style: none;
-    display: inline-block; 
-   
-}
-.main-menu li {
-    display: inline-block;
-    line-height: 50px;
-    font-family: 'Jolly Lodger', cursive;
-    font-size: 30px;
-    text-align: center;
-}
-
-.main-menu a{
-    color: #000;
-    font-size: 18px;
-    padding: 10px;
-    text-transform:uppercase;
-    font-weight: bold;
+#titulo {
+    padding-top: 50px;
+    position: sticky;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: rgb(245, 242, 247);
     text-decoration: none;
 }
 
-/*buscador*/
-.buscador{
-    position: absolute;
-    top: 280px;
-    left: 1000px;
+#titulo a {
+    /* text-decoration: none; */
+    color: rgb(245, 242, 247);
+    ;
 }
 
-.buscador input{
+body {
+    /* background:url(https://i.pinimg.com/564x/32/fb/ea/32fbead8fce21e12751d03e83029961d.jpg); */
+    background: url(./imagenes/background.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+
+}
+
+.main-menu {
+    max-width: 900px;
+    margin: auto;
+    background-color: rgb(5, 9, 58);
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 10px 10px;
+    text-decoration: none;
+    position: sticky;
+    justify-content: space-around;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li a {
+    display: block;
+    padding: 5px 15px;
+    color: rgb(243, 246, 246);
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.spellsType>li:hover {
+    background-color: rgb(41, 43, 43);
+}
+
+.spellsType {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    width: 200px;
+    background-color: rgb(82, 82, 85);
+}
+
+.spellsType:hover {
+    display: block;
+}
+
+.spellsType li:hover {
+    background-color: rgb(46, 71, 71);
+}
+
+.menu>li {
+    float: left;
+}
+.menu li:hover{
+    background-color: rgb(25, 32, 105);
+    border-radius: 30px;
+    height: fit-content;
+}
+
+.spellsType li a {
+    display: block;
+    color: rgb(5, 9, 58);
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+.main-menu #spells:hover .spellsType {
+    display: block;
+    border-radius: 20px;
+}
+
+
+
+
+/*buscador*/
+.buscador {
+    position: absolute;
+    top: 100px;
+    left: 1050px;
+}
+
+.buscador input {
     max-width: 300px;
     height: 35px;
     font-size: 18px;
-    color:black;
+    color: black;
     background-color: rgb(252, 250, 255);
     border: 1px solid rgb(46, 41, 61);
     border-radius: 10px;
 }
-.btn{
-    position:absolute;
+
+.btn {
+    position: absolute;
     top: 10px;
     left: 200px;
     background-color: blueviolets;
@@ -92,105 +148,198 @@ body{
 
 
 
-/*Carrusel*/
-.container{
-    margin: auto;
-    background-color: rgb(41, 42, 70);
-    width: 500px;
-    height: 280px;
-    padding: 20px;
-    border-radius: 20px;
+/*Houses*/
+.container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: fit-content;
+    gap: 20px;
+    display: grid;
+    padding: 10px;
 }
-.slider{
-    position: sticky;
-    width: 700;
-    height: 300;
-}
-.slider li{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-    width: inherit;
-    height: inherit;
-    transition: opacity .5s;
-    border-radius: 20px;
-}
-.slider  img{
-    width: 100%;
-    height: 220px; 
-    object-fit: fill;
-    position: sticky;
-    
-}
-.slider li:first-child{
-    opacity: 0;
-}
-.slider li:target{
-    opacity: 1;
-}
-.puntos{
-    text-align: center;
-    margin: 30px;
-    position:sticky;
-    margin-top: 230px;
-  
-}
-.puntos li{
-    display:inline-block;
-    text-align: center;
 
+.houses {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 2px;
+    float: left;
+    gap: 20px;
+    border-radius: 10px;
 }
- .puntos a{
-    color: rgb(241, 246, 246);
+
+#hGryffindor {
+    background-color: #3d0101;
+    border-radius: 10px;
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px rgb(5, 1, 29);
+}
+
+#hRavenclaw {
+    background-color: #0E1A40;
+    border-radius: 10px;
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px rgb(5, 1, 29);
+}
+
+#hSlytherin {
+    background-color: #1A472A;
+    border-radius: 10px;
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px rgb(5, 1, 29);
+}
+
+#hHufflepuff {
+    background-color: #FFDB00;
+    border-radius: 10px;
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px rgb(5, 1, 29);
+}
+
+.houses a {
+    color: #000;
+    font-size: 18px;
+    padding: 10px;
+    text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
-    background-color: rgb(119, 167, 175);
-    padding: 15px;
-    width: 8px;
-    height: 8px;  
-    border-radius: 100%;
-    position: sticky;
-    display: inline-block;
- }
- /*cards*/
-main{
+    text-align: center;
+    display: block;
+}
+
+#Gryffindor,
+#Hufflepuff,
+#Ravenclaw,
+#Slytherin {
+    font-family: 'Wizard World', sans-serif;
+    letter-spacing: 5px;
+}
+
+#Gryffindor{
+    color:rgb(182, 171, 74);
+}
+
+#Ravenclaw{
+    color:rgb(184, 184, 184);
+}
+
+img {
+    height: 80%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/*cards*/
+main {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     padding: 20px;
     display: grid;
-   
-   
 }
 
-.caracter-card{
+#main-spells {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    display: grid;
+}
+
+.caracter-card,
+.spell-card,
+.fun-Facts,
+.books-card,
+.potions-card,
+.spellsUno-cards {
     width: 100%;
-    border: 1px solid rgb(70, 60, 138);
+    border: 1px solid rgba(87, 71, 92, 0.795);
     background-color: rgba(87, 71, 92, 0.795);
     border-radius: 10px;
     box-shadow: 10px 10px 10px rgb(9, 2, 48);
-    
 }
 
-.caracter-card h3{
+.gryffindor-card {
+    width: 100%;
+    border: 1px solid rgba(68, 0, 0, 0.918);
+    background-color: rgba(68, 0, 0, 0.918);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(9, 2, 48);
+}
+
+.gryffindor-card h4 {
+    color: rgb(243, 220, 10);
+    letter-spacing: 3px;
+}
+
+.gryffindor-card h3 {
+    color: rgb(243, 220, 10);
+    letter-spacing: 5px;
+}
+
+.hufflepuff-card {
+    width: 100%;
+    border: 1px solid rgba(255, 222, 4, 0.918);
+    background-color: rgba(255, 222, 4, 0.918);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(9, 2, 48);
+}
+
+.hufflepuff-card h4 {
+    color: #60605C;
+    letter-spacing: 3px;
+}
+
+.hufflepuff-card h3 {
+    color: #60605C;
+    letter-spacing: 5px;
+}
+
+.ravenclaw-card {
+    width: 100%;
+    border: 1px solid rgba(14, 26, 64, 0.918);
+    background-color: rgba(14, 26, 64, 0.918);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(9, 2, 48);
+}
+
+.ravenclaw-card h4 {
+    color: rgb(184, 184, 184);
+    letter-spacing: 3px;
+}
+
+.ravenclaw-card h3 {
+    color: rgb(184, 184, 184);
+    letter-spacing: 5px;
+}
+
+.slytherin-card {
+    width: 100%;
+    border: 1px solid rgba(26, 71, 42, 0.918);
+    background-color: rgba(26, 71, 42, 0.918);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(9, 2, 48);
+}
+
+.slytherin-card h4 {
+    color: rgb(184, 184, 184);
+    letter-spacing: 3px;
+}
+
+.slytherin-card h3 {
+    color: rgb(184, 184, 184);
+    letter-spacing: 5px;
+}
+
+
+
+h3 {
     color: rgb(0, 0, 0);
     font-family: 'Jolly Lodger', cursive;
     text-align: center;
     font-size: 35px;
     padding: 5px 10px;
 }
-.caracter-card h4{
+
+h4 {
     color: rgb(10, 10, 10);
     font-family: 'Jolly Lodger', cursive;
     text-align: center;
     font-size: 20px;
     padding: 5px 10px;
 }
-
-
-
-
-
-
-
-
