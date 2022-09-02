@@ -23,7 +23,7 @@ export const sortByDsc = (a, b) => {
 
 export const calculateSTAB = (attack, typeattack, type) => {
   const damage = Number(attack);
-  if (type === (typeattack)) {
+  if (type.includes (typeattack)) {
     const stab = ((damage * 1.20));
     return stab;
   }
@@ -34,7 +34,7 @@ export const calculateDPS = (attack, typeattack, type, time) => {
   const damage = Number(attack);
   const moveTime = Number(time);
   let dps = Math.round(damage / moveTime);
-  if (type === (typeattack)) {
+  if (type.includes(typeattack)) {
     const stab = ((damage * 1.20) );
     dps = Math.round(stab / moveTime);
   }
