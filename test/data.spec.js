@@ -1,35 +1,27 @@
-import { filterByType, sortByAsc, sortByDsc, calculateEPS} from '../src/data.js';
+import { filterByType, sortByAsc, sortByDsc,  calculateDPS, calculateEPS, calculateSTAB } from '../src/data.js';
 
 const firstTestExpect = [{
-      "num": "001",
       "name": "bulbasaur",
-      "pokemon-rarity": "normal",
     "type": [
       "grass",
       "poison"
     ],
     },
     {
-      "num": "005",
       "name": "charmeleon",
-      "pokemon-rarity": "normal",
       "type": [
         "fire",
       ]
     },
     {
-      "num": "006",
       "name": "charizard",
-      "pokemon-rarity": "normal",
       "type": [
         "fire",
         "flying"
       ]
     },
     {
-      "num": "006",
       "name": "caterpie",
-      "pokemon-rarity": "normal",
       "type": [
         "bug",
       ]
@@ -38,66 +30,86 @@ const firstTestExpect = [{
 
 
 const secondTestExpect = [{
-  "num": "001",
   "name": "bulbasaur",
-  "pokemon-rarity": "normal",
 "type": [
   "grass",
   "poison"
 ],
 },
 {
-  "num": "006",
   "name": "caterpie",
-  "pokemon-rarity": "normal",
   "type": [
     "bug",
   ]
 },
 {
-  "num": "006",
   "name": "charizard",
-  "pokemon-rarity": "normal",
   "type": [
     "fire",
     "flying"
-  ]
+  ],
+ 
 },
 {
-  "num": "005",
   "name": "charmeleon",
-  "pokemon-rarity": "normal",
   "type": [
     "fire",
   ]
 },
-
 ];
 
+const thirdTestExpect =[
+  {
+    "name": "charmeleon",
+    "type": [
+      "fire",
+    ]
+  },
+  {
+    "name": "charizard",
+    "type": [
+      "fire",
+      "flying"
+    ],
+  },
+  {
+    "name": "caterpie",
+    "type": [
+      "bug",
+    ]
+  },
+  {
+  "name": "bulbasaur",
+"type": [
+  "grass",
+  "poison"
+  ],
+},
+];
+
+ 
 
 describe('sortByAsc', () => {
   it('is a function', () => {
     expect(typeof sortByAsc).toBe('function');
   });
-  it('Debe retornar -1 si los pokemones no están ordenados', () => {
-    expect(firstTestExpect.sort(sortByAsc)).toEqual(firstTestExpect);
+  it('Debe retornar los pokemones no ordenados', () => {
+    expect (firstTestExpect.sort(sortByAsc)).toEqual(firstTestExpect);
   });
-  it('Debe retornar 1 si los pokemones están ordenados', () => {
-    expect(secondTestExpect.sort(sortByAsc)).toEqual(secondTestExpect);
+  it('Debe retornar los pokemones ordenados de la A a la Z', () => {
+    expect (firstTestExpect.sort(sortByAsc)).toEqual(secondTestExpect);
   });
 });
-
 
 describe('sortByDsc', () => {
   it('is a function', () => {
     expect(typeof sortByDsc).toBe('function');
   });
-  it('Debe retornar los pokemones desordenados de z-a', () => {
-    expect(firstTestExpect.sort(sortByDsc)).toEqual(firstTestExpect);
+  it('Debe retornar los pokemones no ordenados', () => {
+    expect (firstTestExpect.sort(sortByDsc)).toEqual(firstTestExpect);
   });
-
   it('Debe retornar los pokemones ordenados de z-a', () => {
-    expect(firstTestExpect.sort(sortByDsc)).toEqual(firstTestExpect);
+    expect (firstTestExpect.sort(sortByDsc)).toEqual(thirdTestExpect);
   });
 });
 
@@ -116,8 +128,43 @@ describe('filterByType', () => {
   });
 
 });
+
+const attack= 80;
+const typeattack= "poison";
+const type= "poison";
+const time= 2.3;
+const energy=-50;
+const type2="grass"
+
+
+describe('calculateDPS', () => {
+  it('is a function', () => {
+    expect(typeof calculateDPS).toBe('function');
+  });
+  it('debe retornar un DPS de 42', () => {
+    expect(calculateDPS(attack, typeattack, type, time)).toEqual(42);
+  })
+  it('attack debe ser igual a typeattack ', () => {
+    expect(calculateDPS(attack, typeattack, type2, time)).toEqual(35);
+  });
+});
+
 describe('calculateEPS', () => {
   it('is a function', () => {
     expect(typeof calculateEPS).toBe('function');
   });
+  it('debe retornar un EPS de -22', () => {
+    expect(calculateEPS(energy, time)).toEqual(-22);
+  })
+});
+describe('calculateSTAB', () => {
+  it('is a function', () => {
+    expect(typeof calculateSTAB).toBe('function');
+  });
+  it('debe retornar un STAB de 80', () => {
+    expect(calculateSTAB(attack, typeattack, type)).toEqual(96);
+  })
+  it('debe retornar un STAB de 80', () => {
+    expect(calculateSTAB(attack, typeattack, type2)).toEqual(80);
+});
 });

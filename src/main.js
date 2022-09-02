@@ -132,5 +132,4 @@ selectSort.addEventListener('change', (e) => {
 
     }
     allpokemons.innerHTML = results.innerHTML;
-
 });
