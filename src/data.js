@@ -1,36 +1,27 @@
-<<<<<<< HEAD
 export const filterByType = (condition, pokemons) => {
   let arrayfiltrado = pokemons.filter(pokemon => pokemon.type[0] == condition.toLowerCase() || pokemon.type[1] == condition.toLowerCase());
-=======
-
-export const filterByType = (condition, pokemons) => {
-  let arrayfiltrado = pokemons.filter(pokemon => pokemon.type[0] == condition.toLowerCase() || pokemon.type[1] == condition.toLowerCase());
-
->>>>>>> 7e1f719fd663e0732f779fbcf36bbe0fe0c58efa
   return arrayfiltrado;
 };
 
- export const sortByAsc= (a, b) => {
- if (a.name > b.name) {
-   return 1;
-   } else {
-     return -1;
-   }
-  
- };
+export const sortByAsc = (a, b) => {
+  if (a.name > b.name) {
+    return 1;
+  } else {
+    return -1;
+  }
 
-
+};
 export const sortByDsc = (a, b) => {
   if (a.name < b.name) {
-     return 1;
-   } else {
-     return -1;
-   }
- };
+    return 1;
+  } else {
+    return -1;
+  }
+};
 
 export const calculateSTAB = (attack, typeattack, type) => {
   const damage = Number(attack);
-  if (type.includes (typeattack)) {
+  if (type.includes(typeattack)) {
     const stab = ((damage * 1.20));
     return stab;
   }
@@ -41,8 +32,8 @@ export const calculateDPS = (attack, typeattack, type, time) => {
   const damage = Number(attack);
   const moveTime = Number(time);
   let dps = Math.round(damage / moveTime);
-  if (type.includes(typeattack)) {
-    const stab = ((damage * 1.20) );
+  if (type === (typeattack)) {
+    const stab = ((damage * 1.20));
     dps = Math.round(stab / moveTime);
   }
   return dps;
@@ -53,9 +44,3 @@ export const calculateEPS = (energy, time) => {
   const eps = Math.round(energyExpend / moveTime);
   return eps;
 }
-
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> 7e1f719fd663e0732f779fbcf36bbe0fe0c58efa

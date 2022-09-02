@@ -109,7 +109,6 @@ allpokemons.classList = "pokeStyle"
 allpokemons.append(generadorHTML(pokemons));
 
 const selecttype = document.getElementById('pokemon-types');
-
 selecttype.addEventListener('change', () => {
     let results = "";
     if (selecttype.value === '') {
@@ -120,8 +119,6 @@ selecttype.addEventListener('change', () => {
         results = generadorHTML(c);
     }
     allpokemons.innerHTML = results.innerHTML;
-
-
 });
 
 const selectSort = document.getElementById("sortby");
@@ -137,5 +134,3 @@ selectSort.addEventListener('change', (e) => {
     allpokemons.innerHTML = results.innerHTML;
 
 });
-
-
