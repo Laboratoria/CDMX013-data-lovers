@@ -215,59 +215,12 @@ max-height: 13px;
     transform: perspective(600px) rotateY(360deg);
     transform: scale(1.2); 
     
-<<<<<<< HEAD
-
 }
-
 div.stats{
     margin-top: 30%;
     margin-left: -18%;
     color: whitesmoke;
     font-family: 'Comfortaa', cursive;
-
-}
-
-table.pokemonAttack{
-    margin-top: 40%;
-    color:black;
-    font-family: 'Comfortaa', cursive;
-    font-size: 9px;
-    font-weight: lighter;
-    margin-left: -3%;
-    
-}
-  
-  .pokemonAttack{
-    width:100%;
-    border-radius: 15px;
-    margin-top: 8px;
-    
-  
-  }
-  
-  .headerTable{
-    color:rgb(169, 89, 254);;
-    text-decoration-line: underline;
-  }
-  
-  .attackNameTable{
-    font-weight: lighter;
-  }
-  
-  .attackStats{
-    font-weight: lighter;
-  }
-=======
-
-}
-
-div.stats{
-    margin-top: 30%;
-    margin-left: -18%;
-    color: whitesmoke;
-    font-family: 'Comfortaa', cursive;
->>>>>>> 2cc0d463c254009e64a28155dda0ae0fffdd0efb
-
 }
 
 table.pokemonAttack{
@@ -317,32 +270,20 @@ table.pokemonAttack{
     color: whitesmoke;
     border-radius: 17px;
     border: 1px solid black;
-    font-weight: 800;
     font-size: 20px;
     position: absolute;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2cc0d463c254009e64a28155dda0ae0fffdd0efb
     font-family: 'Patrick Hand', cursive;
     top: 290px;
     margin: -16px 0px 0px -145px;
-    padding: 90px;
+    padding: 10px;
     
-<<<<<<< HEAD
-=======
-    font-family:'Patrick Hand', cursive;
->>>>>>> 7e1f719fd663e0732f779fbcf36bbe0fe0c58efa
-=======
->>>>>>> 2cc0d463c254009e64a28155dda0ae0fffdd0efb
 }
+
 
 footer {
     font-family: 'Patrick Hand', cursive;
     font-size: 150%;
     text-align: center;
-<<<<<<< HEAD
-<<<<<<< HEAD
     margin-top: 10%;
 }
 
@@ -371,51 +312,3 @@ footer {
     margin: 1% ;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-=======
-    margin-top: 20%;
-=======
-    margin-top: 10%;
->>>>>>> 2cc0d463c254009e64a28155dda0ae0fffdd0efb
-}
-
-#allpokemons {
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
-    padding: 3%;
-    text-transform: capitalize;
-    font-family: 'Comfortaa', cursive;
-    font-size: small;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50px;
-    border: solid 20px rgb(197, 197, 197);
-    margin: -14% 10% 10% 10%;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-
-}
-
-<<<<<<< HEAD
->>>>>>> 7e1f719fd663e0732f779fbcf36bbe0fe0c58efa
-=======
-.card {
-    position: relative;
-    width: 300px;
-    height: 350px;
-    margin: 1% ;
-}
->>>>>>> 2cc0d463c254009e64a28155dda0ae0fffdd0efb
