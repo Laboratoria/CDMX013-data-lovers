@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 export const filterByType = (condition, pokemons) => {
   let arrayfiltrado = pokemons.filter(pokemon => pokemon.type[0] == condition.toLowerCase() || pokemon.type[1] == condition.toLowerCase());
+=======
+
+export const filterByType = (condition, pokemons) => {
+  let arrayfiltrado = pokemons.filter(pokemon => pokemon.type[0] == condition.toLowerCase() || pokemon.type[1] == condition.toLowerCase());
+
+>>>>>>> 7e1f719fd663e0732f779fbcf36bbe0fe0c58efa
   return arrayfiltrado;
 };
 
@@ -47,3 +54,8 @@ export const calculateEPS = (energy, time) => {
   return eps;
 }
 
+<<<<<<< HEAD
+=======
+}
+
+>>>>>>> 7e1f719fd663e0732f779fbcf36bbe0fe0c58efa
