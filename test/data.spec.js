@@ -137,7 +137,6 @@ const energy=-50;
 const type2="grass"
 
 
-
 describe('calculateDPS', () => {
   it('is a function', () => {
     expect(typeof calculateDPS).toBe('function');
