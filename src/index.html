@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ghibli Movies</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <img class="logo" src="img/logo.png" alt="Logo Ghibli">
+    <img class="totoro" src="img/totoro.png" alt="Logo totoro">
+  </header>
+
+  <div class="menuDirector">
+    <label for="filterDirector"> Director</label>
+    <select class="menu" name="filterDirector" id="filterDirector">
+      <option placeholder value="allDirector">Todos</option>
+      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+      <option value="Isao Takahata">Isao Takahata</option>
+      <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+      <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+      <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+      <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+    </select>
+  </div>
+
+  <div class="menuDate">
+    <label for="filterDate">Décadas</label>
+    <select class="menu" name="filterDate" id="filterDate">
+      <option placeholder value="allDate">Todas</option>
+      <option value="1989">80´s</option>
+      <option value="1999">90´s</option>
+      <option value="2009">2000´s</option>
+      <option value="2019">2010´s</option>
+    </select>
+  </div>
+
+  <div class="menuRanking">
+    <label for="orderRanking">Ranking</label>
+    <select class="menu" name="orderRanking" id="orderRanking">
+      <option id="minor" value="minor">Menor a Mayor</option>
+      <option id="mayor" value="mayor">Mayor a Menor</option>
+    </select>
+  </div>
+
+  <button class="statistics" id="statistics">Datos Extras</button>
+
+  <section>
     <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <main id="container">
+    </main>
+  </section>
+
+  <footer></footer>
+  <script src="main.js" type="module"></script>
+</body>
 </html>

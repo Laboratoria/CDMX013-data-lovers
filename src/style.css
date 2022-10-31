@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgba(255, 242, 232, 1);
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 19%;
+    background-color: rgba(64, 84, 124, 1);
+}
+
+.logo {
+    width: 325px;
+    margin-left: 100px;
+    border: #9F1D13;
+}
+
+.menuDirector {
+    color: #ffffff;
+    position: absolute;
+    width: 139px;
+    height: 43px;
+    left: 530px;
+    top: 58px;
+    font-size: 20px;
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+.menuDate {
+    color: #ffffff;
+
+    position: absolute;
+    width: 139px;
+    height: 43px;
+    left: 730px;
+    top: 50px;
+
+    font-size: 20px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px 24px;
+    border: 0cm transparent;
+    font-family: 'Sen', sans-serif;
+}
+
+.menuRanking {
+    color: #ffffff;
+    transition-duration: 0.4s;
+    position: absolute;
+    width: 139px;
+    height: 43px;
+    left: 1400px;
+    top: 100px;
+    background-color: transparent;
+    font-size: 20px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px 24px;
+    border: 0cm transparent;
+    font-family: 'Sen', sans-serif;
+}
+
+.menuRanking {
+    color: #ffffff;
+    transition-duration: 0.4s;
+    position: absolute;
+    width: 139px;
+    height: 43px;
+    left: 920px;
+    top: 50px;
+    background-color: transparent;
+    font-size: 20px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px 24px;
+    border: 0cm transparent;
+    font-family: 'Sen', sans-serif;
+}
+
+.poster {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+
+}
+
+.imagen {
+    width: 310px;
+    height: 438px;
+    border-radius: 15px;
+    border-style: outset;
+}
+
+.filmStyle {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    place-items: center;
+    padding-top: 250px;
+    grid-auto-rows: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/*Año */
+h4 {
+    color: rgb(0, 0, 0);
+    font-family: 'Sen', sans-serif;
+    font-size: 15px;
+}
+
+/* Score */
+h5 {
+    background-image: url(img/star.png);
+    background-size: 25px;
+    background-position: ;
+    color: rgb(255, 255, 255);
+    font-family: 'Sen', sans-serif;
+    font-size: 20px;
+    border-radius: 16px;
+}
+
+
+/* Titulo */
+h2 {
+    color: rgb(0, 0, 0);
+    font-family: 'Sen', sans-serif;
+    font-size: 20px;
+}
+
+.menu {
+
+    font-size: medium;
+    font-family: 'Sen', sans-serif;
+    text-align: center;
+}
+
+.statistics {
+
+    color: #ffffff;
+    background-color: rgba(64, 84, 124, 1);
+    position: absolute;
+    width: 139px;
+    height: 30px;
+    left: 1602px;
+    top: 51px;
+    font-size: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Sen', sans-serif;
+
+
+
+}
+
+.totoro {
+    width: 50px;
+    position: absolute;
+    left: 1639px;
+    top: 93px;
+
+}
+
+.characters {
+    background-image: url(img/personajes.jpg);
+    width: 1074px;
+    height: 743px;
+    margin-top: 180px;
+    margin-left: -814px;
+    border-radius: 15px;
+    border-style: groove;
+}
+
+.average {
+    background-color: rgba(64, 84, 124, 1);
+    color: #ffffff;
+    font-size: 30px;
+    font-family: "sen";
+    width: 485px;
+    height: 80px;
+    margin-top: -783px;
+    margin-left: 750px;
+    border-radius: 5px;
+    text-align: center;
+}
